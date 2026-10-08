@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+min-height: 100vh;
+background: linear-gradient(135deg, #160b24, #35103f, #581c4c, #240d35);
+color: #fff0f6;
+font-family: 'Poppins', sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 40px 20px;
+overflow-x: hidden;
+position: relative;
+}
+
+.stars {
+position: absolute;
+top: 25px;
+color: #ffb7d5;
+font-size: 25px;
+letter-spacing: 8px;
+animation: sparkle 3s infinite alternate;
+}
+
+.birthday-card {
+width: 100%;
+max-width: 650px;
+padding: 45px 40px;
+text-align: center;
+background: linear-gradient(145deg, #38153f, #24102e);
+border: 1px solid #a94d82;
+border-radius: 30px;
+box-shadow: 0 0 35px #d6338430, 0 0 80px #9d4edd20;
+position: relative;
+animation: appear 1.2s ease;
+}
+
+.heart {
+font-size: 55px;
+margin-bottom: 15px;
+animation: heartbeat 1.5s infinite;
+}
+
+.small-text {
+font-size: 11px;
+letter-spacing: 4px;
+color: #f5a5cb;
+margin-bottom: 20px;
+}
+
+h1 {
+font-family: 'Pacifico', cursive;
+font-size: clamp(32px, 7vw, 52px);
+color: #ffc1dc;
+text-shadow: 0 0 20px #ff69b460;
+font-weight: 400;
+}
+
+h2 {
+font-family: 'Pacifico', cursive;
+font-size: clamp(48px, 9vw, 75px);
+color: #ff75b5;
+margin-top: 5px;
+text-shadow: 0 0 25px #ff4da680;
+font-weight: 400;
+}
+
+.divider {
+display: flex;
+align-items: center;
+gap: 15px;
+margin: 25px 0;
+color: #ff8fbd;
+font-size: 25px;
+}
+
+.divider::before,
+.divider::after {
+content: "";
+height: 1px;
+flex: 1;
+background: linear-gradient(90deg, transparent, #c75a96);
+}
+
+.divider::after {
+background: linear-gradient(90deg, #c75a96, transparent);
+}
+
+.message {
+color: #f5d9e9;
+font-size: 14px;
+line-height: 2;
+font-weight: 300;
+}
+
+.message strong {
+color: #ff8fbd;
+font-size: 16px;
+font-weight: 600;
+}
+
+.footer {
+margin-top: 30px;
+color: #dca0c7;
+font-size: 12px;
+letter-spacing: 1px;
+}
+
+.footer span {
+color: #ff75b5;
+padding: 0 8px;
+}
+
+.decorations {
+margin-top: 25px;
+font-size: 25px;
+letter-spacing: 3px;
+}
+
+.bottom-text {
+text-align: center;
+margin-top: 30px;
+color: #dca0c7;
+font-size: 10px;
+letter-spacing: 3px;
+line-height: 2;
+}
+
+@keyframes heartbeat {
+0%, 100% {
+transform: scale(1);
+}
+
+50% {
+    transform: scale(1.2);
+}
+}
+
+@keyframes sparkle {
+from {
+opacity: 0.4;
+transform: translateY(0);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(8px);
+}
+
+}
+
+@keyframes appear {
+from {
+opacity: 0;
+transform: translateY(30px);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+}
+
+@media (max-width: 500px) {
+.birthday-card {
+padding: 35px 22px;
+}
+
+.small-text {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.message {
+    font-size: 13px;
+}
+
+.bottom-text {
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+
+}
